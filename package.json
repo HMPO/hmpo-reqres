@@ -1,29 +1,33 @@
 {
-  "name": "reqres",
-  "version": "3.0.1",
+  "name": "hmpo-reqres",
+  "version": "0.1.0",
   "description": "Stub request and response objects for testing express applications and middleware",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./lib && eslint ./test",
-    "unit": "mocha ./test --require ./test/helpers --recursive --require choma",
-    "examples": "mocha ./examples --recursive --require choma",
-    "test": "npm run lint && npm run unit && npm run examples"
+    "test": "npm run test:lint && npm run test:unit && npm run examples",
+    "test:lint": "eslint ./lib && eslint ./test",
+    "test:unit": "mocha ./test --require ./test/helpers --recursive --require choma",
+    "examples": "mocha ./examples --recursive --require choma"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lennym/reqres.git"
+    "url": "https://github.com/HMPO/hmpo-reqres.git"
   },
   "keywords": [
     "express",
     "stub",
-    "testing"
+    "testing",
+    "sinon"
   ],
-  "author": "Leonard Martin <hello@lennym.co.uk>",
+  "author": "HMPO",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lennym/reqres/issues"
+  "engines": {
+    "node": ">=20"
   },
-  "homepage": "https://github.com/lennym/reqres",
+  "bugs": {
+    "url": "https://github.com/HMPO/hmpo-reqres/issues"
+  },
+  "homepage": "https://github.com/HMPO/hmpo-reqres",
   "dependencies": {
     "express": "^4.17.1",
     "sinon": "^7.5.0"

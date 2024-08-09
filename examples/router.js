@@ -21,13 +21,13 @@ describe('my router', function () {
   let res;
 
   beforeEach(function () {
-    req = reqres.req({ url: '/foo', session: { username: 'lennym' } });
+    req = reqres.req({ url: '/foo', session: { username: 'hmpo' } });
     res = reqres.res();
   });
 
   it('sets username from session to req.user', function (done) {
     router(req, res, function () {
-      req.user.should.equal('lennym');
+      req.user.should.equal('hmpo');
       done();
     });
   });
