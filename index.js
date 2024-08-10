@@ -7,7 +7,7 @@ const reqres = {
 
 Object.defineProperty(reqres, 'sinon', {
   get: () => stub(),
-  set: val => stub(val)
+  set: val => { stub(val) }
 });
 
 module.exports = reqres;
