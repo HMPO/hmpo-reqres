@@ -1,8 +1,8 @@
 'use strict';
 
-const reqres = require('../');
+const reqres = require('..');
 
-describe('req', function () {
+describe('req', () => {
 
   let req;
 
@@ -10,51 +10,51 @@ describe('req', function () {
     reqres.sinon = require('sinon');
   });
 
-  beforeEach(function () {
+  beforeEach(() => {
     req = reqres.req();
   });
 
-  describe('originalUrl', function () {
+  describe('originalUrl', () => {
 
-    it('is constructed from url and baseUrl properties', function () {
+    it('is constructed from url and baseUrl properties', () => {
       reqres.req({ url: '/foo' }).originalUrl.should.equal('/foo');
       reqres.req({ url: '/foo', baseUrl: '/base' }).originalUrl.should.equal('/base/foo');
     });
 
   });
 
-  describe('object properties are reset', function () {
+  describe('object properties are reset', () => {
 
-    it('params', function () {
+    it('params', () => {
       req.params.foo = 'bar';
       reqres.req({}).params.should.eql({});
     });
 
-    it('body', function () {
+    it('body', () => {
       req.body.foo = 'bar';
       reqres.req({}).body.should.eql({});
     });
 
-    it('session', function () {
+    it('session', () => {
       req.session.foo = 'bar';
       reqres.req({}).session.should.eql({});
     });
 
-    it('cookies', function () {
+    it('cookies', () => {
       req.cookies.foo = 'bar';
       reqres.req({}).cookies.should.eql({});
     });
 
-    it('query', function () {
+    it('query', () => {
       req.query.foo = 'bar';
       reqres.req({}).query.should.eql({});
     });
 
   });
 
-  describe('app', function () {
+  describe('app', () => {
 
-    it('has get and set methods', function () {
+    it('has get and set methods', () => {
       req.app.get.should.be.a('function');
       req.app.set.should.be.a('function');
     });

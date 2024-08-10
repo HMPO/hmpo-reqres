@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test:lint && npm run test:unit && npm run examples",
-    "test:lint": "eslint ./lib && eslint ./test",
-    "test:unit": "mocha ./test --require ./test/helpers --recursive --require choma",
-    "examples": "mocha ./examples --recursive --require choma"
+    "test:lint": "eslint .",
+    "test:unit": "mocha --require test/helpers",
+    "examples": "mocha examples"
   },
   "repository": {
     "type": "git",
@@ -29,14 +29,14 @@
   },
   "homepage": "https://github.com/HMPO/hmpo-reqres",
   "dependencies": {
-    "express": "^4.17.1",
-    "sinon": "^7.5.0"
+    "express": "^4.19.2",
+    "sinon": "^18.0.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "choma": "^1.0.1",
-    "eslint": "^3.19.0",
-    "mocha": "^6.2.2",
-    "sinon-chai": "^2.14.0"
+    "chai": "^4.5.0",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0",
+    "mocha": "^10.7.3",
+    "sinon-chai": "^3.7.0"
   }
 }
