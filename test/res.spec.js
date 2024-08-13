@@ -1,9 +1,9 @@
 'use strict';
 
-const reqres = require('../');
+const reqres = require('..');
 const EventEmitter = require('events').EventEmitter;
 
-describe('res', function () {
+describe('res', () => {
 
   let res;
 
@@ -11,15 +11,15 @@ describe('res', function () {
     reqres.sinon = require('sinon');
   });
 
-  beforeEach(function () {
+  beforeEach(() => {
     res = reqres.res();
   });
 
-  it('implements EventEmitter', function () {
+  it('implements EventEmitter', () => {
     res.should.be.an.instanceOf(EventEmitter);
   });
 
-  describe('emits "end" event when methods that send responses are called', function () {
+  describe('emits "end" event when methods that send responses are called', () => {
     const methods = [
       'json',
       'jsonp',
@@ -30,8 +30,8 @@ describe('res', function () {
       'sendStatus'
     ];
 
-    methods.forEach(function (method) {
-      it(method, function (done) {
+    methods.forEach((method) => {
+      it(method, (done) => {
         res[method]();
         res.on('end', done);
       });
@@ -39,9 +39,9 @@ describe('res', function () {
 
   });
 
-  describe('app', function () {
+  describe('app', () => {
 
-    it('has get and set methods', function () {
+    it('has get and set methods', () => {
       res.app.get.should.be.a('function');
       res.app.set.should.be.a('function');
     });
