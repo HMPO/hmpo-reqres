@@ -7,7 +7,8 @@
     "test": "npm run test:lint && npm run test:unit && npm run examples",
     "test:lint": "eslint .",
     "test:unit": "mocha --require test/helpers",
-    "examples": "mocha examples"
+    "examples": "mocha examples",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -22,21 +23,22 @@
   "author": "HMPO",
   "license": "MIT",
   "engines": {
-    "node": ">=20"
+    "node": "20.x || 22.x"
   },
   "bugs": {
     "url": "https://github.com/HMPO/hmpo-reqres/issues"
   },
   "homepage": "https://github.com/HMPO/hmpo-reqres",
   "dependencies": {
-    "express": "^4.19.2",
-    "sinon": "^18.0.0"
+    "express": "^4.21.1",
+    "sinon": "^19.0.2"
   },
   "devDependencies": {
     "chai": "^4.5.0",
-    "eslint": "^9.9.0",
+    "eslint": "^9.12.0",
     "globals": "^15.9.0",
     "mocha": "^10.7.3",
-    "sinon-chai": "^3.7.0"
+    "sinon-chai": "^3.7.0",
+    "husky": "^9.1.6"
   }
 }
