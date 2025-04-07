@@ -6,6 +6,8 @@ Creates default request and response object with configurable values, and method
 
 ## Usage
 
+With linked examples.
+
 [Using default request properties](./examples/simple.js):
 
 ```javascript
@@ -112,3 +114,9 @@ If you want to use a different version of sinon to that which is included in req
 const reqres = require("reqres");
 reqres.sinon = require("sinon");
 ```
+
+## Some Extra Examples
+
+* [hmpo-form-wizard tests](https://github.com/HMPO/hmpo-form-wizard/blob/f9ad4df65d500eea2128e6773f09980e17e53d3b/test/helpers/request.js#L4)
+* [hmpo-i18n tests](https://github.com/HMPO/hmpo-i18n/blob/0ae54585987a0c8afa6af68c4724fdc754ec2d59/test/spec/spec.middleware.js#L25)
+* [hmpo-stubber tests](https://github.com/HMPO/hmpo-stubber/blob/9760d6a1a87db88770c7417b520a07ffa1471578/test/unit/lib/spec.stub.js#L83)
